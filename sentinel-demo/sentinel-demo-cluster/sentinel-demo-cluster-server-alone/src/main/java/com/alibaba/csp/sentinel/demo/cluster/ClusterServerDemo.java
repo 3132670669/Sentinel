@@ -23,6 +23,21 @@ import com.alibaba.csp.sentinel.cluster.server.config.ClusterServerConfigManager
 import com.alibaba.csp.sentinel.cluster.server.config.ServerTransportConfig;
 
 /**
+ * 
+ * JVM PARAM:
+ * -Dio.netty.tryReflectionSetAccessible=true
+ * -Dsun.reflect.debugModuleAccessChecks=access
+ * --add-opens=java.base/jdk.internal.misc=ALL-UNNAMED
+ * --add-exports=java.base/sun.nio.ch=ALL-UNNAMED
+ * --add-opens=java.base/java.lang=ALL-UNNAMED
+ * --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+ * --add-opens=java.base/java.io=ALL-UNNAMED
+ * --add-opens=java.base/java.nio=ALL-UNNAMED
+ * --add-exports=jdk.unsupported/sun.misc=ALL-UNNAMED
+ * -Dcsp.sentinel.api.port=8723
+ * 
+ * 
+ * 
  * <p>Cluster server demo (alone mode).</p>
  * <p>Here we init the cluster server dynamic data sources in
  * {@link com.alibaba.csp.sentinel.demo.cluster.init.DemoClusterServerInitFunc}.</p>

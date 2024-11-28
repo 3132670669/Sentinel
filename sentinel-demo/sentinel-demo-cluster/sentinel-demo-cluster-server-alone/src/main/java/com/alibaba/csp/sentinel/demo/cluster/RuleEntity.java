@@ -15,15 +15,27 @@
  */
 package com.alibaba.csp.sentinel.demo.cluster;
 
+import com.alibaba.csp.sentinel.slots.block.Rule;
+
+import java.util.Date;
+
 /**
- * @author Eric Zhao
+ * RuleEntity copy from Sentinel Dashboard 
+ * @author leyou
  */
-public final class DemoConstants {
+public interface RuleEntity {
 
-    public static final String APP_NAME = "sidecar-example-cache";
+    Long getId();
 
-    public static final String FLOW_POSTFIX = "-flow-rules";
-    public static final String PARAM_FLOW_POSTFIX = "-param-rules";
+    void setId(Long id);
 
-    private DemoConstants() {}
+    String getApp();
+
+    String getIp();
+
+    Integer getPort();
+
+    Date getGmtCreate();
+    
+    Rule toRule();
 }
